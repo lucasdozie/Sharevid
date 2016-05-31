@@ -38,7 +38,7 @@
         <p><%= @movie.description %></p>
         <% if @reviews.blank? %>
           <h3>No review just yet, would you like to add the first</h3>
-          <%= link_to "Write a Review", new_movie_review_path(@movie) %>\
+          <%= link_to "Write a Review", new_movie_review_path(@movie) %>
           <% else %>
             <% @reviews.each do |review|%>
             <div class="reviews">
@@ -48,7 +48,14 @@
             </div>
             <% end %>
         <% end %>
+        <div class="live-streaming">
+        <%= video_tag @movie.video.url(:original), :size => "600x240", :controls => true%>
+        <%= image_tag "Urban.jpg", :size => "320x240" %>
+        <%= video_tag "Flash.mp4", :size => "520x340" %>
       </div>
+
+      </div>
+      
     </div>
   </div>
 </div>
