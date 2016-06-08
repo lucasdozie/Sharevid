@@ -49,8 +49,7 @@
             <% end %>
         <% end %>
         <div class="live-streaming">
-        <%= video_tag @movie.video.url(:original), :size => "600x240", :controls => true%>
-        <%= image_tag "Urban.jpg", :size => "320x240" %>
+        <%= video_tag @movie.video.url(:medium), :size => "600x240", :controls => true, type: "video/mp4" %>
         <%= video_tag "Flash.mp4", :size => "520x340" %>
       </div>
 
